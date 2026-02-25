@@ -1,0 +1,50 @@
+.main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #faf2e6;
+  min-width: 480px;
+  height: 250px;
+  border-radius: 12px;
+}
+.title {
+  text-align: center;
+  width: 424px;
+  height: 78px;
+  color: #205529;
+  font-family: Serif;
+  font-size: 32px;
+  font-weight: 400;
+  margin: 0 auto;
+}
+.description {
+  color: #205529;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 5px auto;
+}
+.btn {
+  background-color: #205529;
+  color: #faf2e6;
+  width: 121px;
+  height: 43px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  font-family: Pontano Sans;
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 25px;
+}
+.btn:hover {
+  opacity: 0.9;
+}
