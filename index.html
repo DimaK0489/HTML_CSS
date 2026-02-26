@@ -2,27 +2,33 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Notebook tasks</title>
+    <title>BEM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <header>
-      <h1>Todolist</h1>
-      <img src="images/td.png" alt="Html" />
-      <ul>
-        <li>Monday</li>
-        <li>Tuesday</li>
-        <li>Wednesday</li>
-      </ul>
+      <h1>Block-Element-Modifier</h1>
     </header>
-    <main>
-      <h2>Tasks for Todolists</h2>
-      <p>Task_1</p>
-      <p>Task_2</p>
-      <p>Task_3</p>
+    <main class="container">
+      <h1 class="container__title">YouTube Premium- 1442</h1>
+      <div class="container__music">
+        <h2 class="container__item">Music</h2>
+        <hr />
+        <p class="container__description">
+          Listen to music without ads, in the background and offline
+        </p>
+        <p class="container__price">$60</p>
+        <button class="container__button">Get started</button>
+      </div>
+      <div class="container__premium">
+        <h2 class="container__item">Premium</h2>
+        <hr />
+        <p class="container__description">
+          Listen to music without ads, in the background and offline
+        </p>
+        <p class="container__price">$60</p>
+        <button class="container__button">Get started</button>
+      </div>
     </main>
-    <footer>
-      <p>TD Company 2026</p>
-    </footer>
   </body>
 </html>
