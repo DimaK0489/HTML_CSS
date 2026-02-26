@@ -9,26 +9,34 @@
     <header>
       <h1>Block-Element-Modifier</h1>
     </header>
-    <main class="container">
-      <h1 class="container__title">YouTube Premium- 1442</h1>
-      <div class="container__music">
-        <h2 class="container__item">Music</h2>
-        <hr />
-        <p class="container__description">
-          Listen to music without ads, in the background and offline
-        </p>
-        <p class="container__price">$60</p>
-        <button class="container__button">Get started</button>
-      </div>
-      <div class="container__premium">
-        <h2 class="container__item">Premium</h2>
-        <hr />
-        <p class="container__description">
-          Listen to music without ads, in the background and offline
-        </p>
-        <p class="container__price">$60</p>
-        <button class="container__button">Get started</button>
-      </div>
+    <main>
+      <h1>Example BEM</h1>
+      <section class="subscription">
+        <h1 class="subscription__title">YouTube Premium- 1442</h1>
+        <div class="subscription__container">
+          <!-- card №1 -->
+          <div class="subscription__container card">
+            <h2 class="card__title">Music</h2>
+            <hr />
+            <p class="card__description">
+              Listen to music without ads, in the background and offline
+            </p>
+            <p class="card__price">$60</p>
+            <button class="card__button">Get started</button>
+          </div>
+
+          <!-- card №2 -->
+          <div class="subscription__container card">
+            <h2 class="card__title">Premium</h2>
+            <hr />
+            <p class="card__description">
+              Listen to music without ads, in the background and offline
+            </p>
+            <p class="card__price">$60</p>
+            <button class="card__button">Get started</button>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
