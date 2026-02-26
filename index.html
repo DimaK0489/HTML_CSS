@@ -2,27 +2,90 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Notebook tasks</title>
+    <title>BEM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
     <header>
-      <h1>Todolist</h1>
-      <img src="images/td.png" alt="Html" />
-      <ul>
-        <li>Monday</li>
-        <li>Tuesday</li>
-        <li>Wednesday</li>
-      </ul>
+      <h1>Block-Element-Modifier</h1>
     </header>
     <main>
-      <h2>Tasks for Todolists</h2>
-      <p>Task_1</p>
-      <p>Task_2</p>
-      <p>Task_3</p>
+      <h1>Example BEM</h1>
+      <section class="subscription">
+        <h1 class="subscription__title">YouTube Premium- 1442</h1>
+        <div class="subscription__container">
+          <!-- card №1 -->
+          <div class="subscription__container card">
+            <h2 class="card__title">Music</h2>
+            <hr />
+            <p class="card__description">
+              Listen to music without ads, in the background and offline
+            </p>
+            <p class="card__price">$60</p>
+            <button class="card__button">Get started</button>
+          </div>
+
+          <!-- card №2 -->
+          <div class="subscription__container card">
+            <h2 class="card__title">Premium</h2>
+            <hr />
+            <p class="card__description">
+              Listen to music without ads, in the background and offline
+            </p>
+            <p class="card__price">$60</p>
+            <button class="card__button">Get started</button>
+          </div>
+        </div>
+      </section>
+      <section class="services">
+        <div class="services__container">
+          <div class="services__type">
+            <div class="services__type card">
+              <img class="card__image" src="" alt="Luna" />
+              <h2 class="card__title">Meditation</h2>
+              <p class="card__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros.
+              </p>
+              <a href="#" class="card__button">Learn More ></a>
+            </div>
+            <div class="services__type card">
+              <img class="card__image" src="" alt="picture" />
+              <h2 class="card__title">Therapy</h2>
+              <p class="card__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros.
+              </p>
+              <a href="#" class="card__button">Learn More ></a>
+            </div>
+            <div class="services__type card">
+              <img class="card__image" src="" alt="Like" />
+              <h2 class="card__title">Natural Beauty</h2>
+              <p class="card__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros.
+              </p>
+              <a href="#" class="card__button">Learn More ></a>
+            </div>
+            <div class="services__type card">
+              <img class="card__image" src="" alt="Smile" />
+              <h2 class="card__title">Messages</h2>
+              <p class="card__description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse varius enim in eros.
+              </p>
+              <a href="#" class="card__button">Learn More ></a>
+            </div>
+            <div class="service__actions">
+              <button class="button">Book an Appointment</button>
+              <a href="#" class="service__learn">Learn more ></a>
+            </div>
+          </div>
+          <div class="service__img-wrapper">
+            <img class="service__img" src="" alt="picture" />
+          </div>
+        </div>
+      </section>
     </main>
-    <footer>
-      <p>TD Company 2026</p>
-    </footer>
   </body>
 </html>
