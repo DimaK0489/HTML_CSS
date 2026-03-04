@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 480px;
+  padding: 40px 28px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: #faf2e6;
+  border-radius: 12px;
+}
+.title {
+  color: #205529;
+  font-family: Serif;
+  font-size: 36px;
+  line-height: 100%;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+.description {
+  color: #205529;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 136%;
+  margin-bottom: 12px;
+}
+.btn {
+  background-color: #205529;
+  color: #faf2e6;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  font-family: Pontano Sans;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 12px 19px;
+  line-height: 136%;
+}
+.btn:hover {
+  opacity: 0.9;
+}
