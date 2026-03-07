@@ -10,20 +10,17 @@ main {
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   max-width: 294px;
   background-color: #f6f9fc;
   border-radius: 25px;
   margin: 0 auto;
   padding: 35px;
   text-align: center;
-  gap: 30px;
 }
 
 .picture {
   max-width: 80px;
+  margin-bottom: 30px;
 }
 
 .title {
@@ -32,7 +29,7 @@ main {
   font-size: 24px;
   line-height: 29px;
   color: #343a40;
-  margin: 0;
+  margin-bottom: 25px;
 }
 
 .descriptions {
@@ -42,11 +39,10 @@ main {
   font-size: 16px;
   line-height: 28px;
   color: #343a40;
-  margin: 0;
+  margin: 0 auto 30px;
 }
 .btn {
   font-family: "Inter", sans-serif;
-  margin-top: 8px;
   color: #485c46;
   cursor: pointer;
   padding: 10px 16px;
