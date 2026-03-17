@@ -8,35 +8,6 @@ main {
   margin: 0;
   padding: 0;
 }
-
-.flex-wrapper {
-  padding: 200px 0;
-}
-
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  border: 1px solid #dad9d9;
-  max-width: 1440px;
-  margin: 0 auto;
-}
-
-.flex-item {
-  flex: 1;
-  border-right: 1px solid #dad9d9;
-  padding: 30px 50px;
-}
-
-.flex-picture {
-  width: 25px;
-  height: 25px;
-}
-
-.flex-descriptions {
-  font-family: "Noto", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 160%;
-  color: #292d33;
-  margin-top: 20px;
+.flex-wrapper span {
+  background-color: aqua;
 }
