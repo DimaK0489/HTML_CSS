@@ -3,38 +3,38 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-main {
-  margin: 0;
-  padding: 0;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 .grid-wrapper {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  height: 100vh;
   background-color: #070707;
-  font-family: "Roboto", sans-serif;
+  padding: 436px 0;
+}
+.grid-wrapper__container {
+  max-width: 1120px;
+  margin: 0 auto;
 }
 
 .grid-header {
   text-align: center;
   max-width: 630px;
   color: #ffffff;
+  margin: 0 auto 60px;
 }
 
-.grid-header h2 {
+.grid-header__title {
   font-weight: 600;
   font-size: 48px;
   line-height: 56px;
   margin-bottom: 14px;
 }
 
-.grid-header p {
+.grid-header__description {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  margin: 0 auto;
 }
 
 .grid-cards {
@@ -50,14 +50,14 @@ main {
   border-radius: 12px;
   background-color: #4b4a4a;
 }
-.card-plan h3 {
+.card-plan__name {
   margin-bottom: 12px;
   font-weight: 600;
   font-size: 32px;
   line-height: 40px;
   font-family: "Inter Tight", sans-serif;
 }
-.card-plan p {
+.card-plan__description {
   line-height: 24px;
   font-size: 16px;
   font-weight: 400;
@@ -69,14 +69,14 @@ main {
   border-radius: 12px;
   background-color: #4b4a4a;
 }
-.card-pro h3 {
+.card-pro__name {
   margin-bottom: 12px;
   font-weight: 600;
   font-size: 32px;
   line-height: 40px;
   font-family: "Inter Tight", sans-serif;
 }
-.card-pro p {
+.card-pro__description {
   line-height: 24px;
   font-size: 16px;
   font-weight: 400;
@@ -90,13 +90,15 @@ main {
   grid-column: 1 / span 2;
   background-color: #f5aa21;
 }
-.card-premium p {
+
+.card-premium__name {
+  font-size: 32px;
+  line-height: 40px;
+  margin-bottom: 12px;
+}
+
+.card-premium__description {
   line-height: 24px;
   font-size: 16px;
   font-weight: 400;
-}
-.card-premium h3 {
-  font-size: 32px;
-  line-height: 40px;
-  padding-bottom: 12px;
 }
