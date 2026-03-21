@@ -9,12 +9,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <main>
-      <div class="content-wrapper">
-        <header>Header</header>
-        <aside>Sidebar</aside>
-        <footer>Footer</footer>
+    <form class="form" action="/server" method="post" target="_blank">
+      <!-- Name - SurName -->
+      <div class="form__group">
+        <label class="form__label" for="nameSurname">Имя и Фамилия</label>
+        <input
+          id="nameSurname"
+          class="form__input"
+          type="text"
+          placeholder="Александрa Иванова"
+        />
       </div>
-    </main>
+      <!-- Price -->
+      <div class="form__price">
+        <p class="form__text">ПОКАЗАТЬ ЦЕНУ</p>
+        <div class="form__rows">
+          <label class="form__label">
+            <input type="radio" name="price" checked />
+            <span class="dot"></span>
+            на человека
+          </label>
+
+          <label class="form__label">
+            <input type="radio" name="price" />
+            <span class="dot"></span>
+            на всех
+          </label>
+        </div>
+      </div>
+      <!-- Food -->
+      <div class="form__food">
+        <p class="form__text">Еда</p>
+        <div class="form__checkbox-list">
+          <label class="form__checkbox"
+            >2-х разовое питание
+            <input type="radio" name="meal" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="form__checkbox"
+            >3-разовое питание
+            <input type="radio" checked="checked" name="meal" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="form__checkbox"
+            >Все включено
+            <input type="radio" name="meal" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="form__checkbox"
+            >Без еды
+            <input type="radio" name="meal" />
+            <span class="checkmark"></span>
+          </label>
+
+          <label class="form__checkbox"
+            >Завтраки
+            <input type="radio" name="meal" />
+            <span class="checkmark"></span>
+          </label>
+        </div>
+      </div>
+    </form>
   </body>
 </html>
