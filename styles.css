@@ -4,10 +4,26 @@
   box-sizing: border-box;
 }
 
-main {
-  margin: 0;
-  padding: 0;
+.flex-wrapper {
+  color: rgb(236, 235, 242);
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("https://images.unsplash.com/photo-1548766232-e0c28830f43e?q=80&w=1635&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+  background-size: cover;
+  background-position: center;
 }
-.flex-wrapper span {
-  background-color: aqua;
+
+.spacer {
+  height: 100vh;
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #413b3b;
+}
+figcaption {
+  font-style: italic;
+  padding: 10px;
+  color: #413b3b;
 }
