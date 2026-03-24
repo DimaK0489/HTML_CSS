@@ -7,17 +7,16 @@
 body {
   background-color: black;
   height: 2000px;
+  font-family: "Inter Tight", sans-serif;
 }
 
-.main-header {
+.header {
   position: sticky;
   top: 0;
   z-index: 100;
 
   padding: 15px;
-  height: 76px;
   background-color: #ffffff;
-  font-family: "Inter Tight", sans-serif;
 
   display: flex;
   flex-direction: row;
@@ -29,7 +28,11 @@ body {
   align-items: center;
   gap: 8px;
 }
-.logo-text {
+.logo__img {
+  width: 32px;
+  height: 32px;
+}
+.logo__text {
   font-weight: 500;
   font-size: 24px;
   line-height: 32px;
@@ -40,7 +43,7 @@ body {
   gap: 32px;
 }
 
-.nav-link {
+.nav__link {
   text-decoration: none;
   color: #070707;
   font-weight: 500;
@@ -48,9 +51,7 @@ body {
   line-height: 20px;
 }
 
-.button {
-  width: 100px;
-  height: 48px;
+.nav__button {
   border-radius: 72px;
   border: none;
 
@@ -59,4 +60,5 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
+  padding: 12px 10px;
 }
