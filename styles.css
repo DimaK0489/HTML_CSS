@@ -28,12 +28,10 @@ form {
   margin-bottom: 5px;
 }
 .form__input {
-  width: 230px;
-  height: 40px;
   border-radius: 30px;
   border: 1px solid #a1a1a1;
-  text-align: center;
   font-size: 16px;
+  padding: 10px 26px;
 }
 
 .form__price {
@@ -112,7 +110,6 @@ form {
   display: block;
   position: relative;
   padding-left: 45px;
-  margin-bottom: 22px;
   cursor: pointer;
   font-size: 18px;
   line-height: 28px;
