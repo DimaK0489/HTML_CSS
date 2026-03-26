@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.wrapper {
+.card {
   width: 100vw;
   height: 100vh;
 
@@ -18,7 +18,7 @@
   align-items: center;
 }
 
-.footer {
+.card__descriptions {
   background: white;
   position: relative;
   padding: 20px 0px;
@@ -32,7 +32,7 @@
   text-transform: uppercase;
   letter-spacing: -2%;
 }
-.footer::after {
+.card__descriptions::after {
   content: "";
   position: absolute;
   bottom: 0;

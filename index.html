@@ -9,23 +9,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div class="wrapper">
-      <figure>
-        <picture>
+    <div class="card">
+      <figure class="card__figure">
+        <picture class="card__picture">
           <source
-            media="min-width: 1024px"
+            media="(min-width: 1024px)"
             srcset="images/edb0bda168fd46afba290817711f67b429822811.jpg"
           />
           <source
-            media="min-width: 600px"
+            media="(min-width: 600px)"
             srcset="images/edb0bda168fd46afba290817711f67b429822811.jpg"
           />
           <img src="small.jpg" alt="The best picture font" loading="lazy" />
         </picture>
+        <figcaption class="card__descriptions">
+          <span class="author">DAVID MILLER</span>
+        </figcaption>
       </figure>
     </div>
-    <figcaption class="footer">
-      <span class="author">DAVID MILLER</span>
-    </figcaption>
   </body>
 </html>
