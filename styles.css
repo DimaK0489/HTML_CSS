@@ -4,10 +4,152 @@
   box-sizing: border-box;
 }
 
-main {
-  margin: 0;
-  padding: 0;
+body {
+  font-family: "Roboto", sans-serif;
 }
-.content-wrapper {
-  background-color: aqua;
+
+form {
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: 5px;
+  border: 2px solid #d4d4d4;
+  padding: 25px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+.form__label {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #585858;
+  margin-bottom: 5px;
+}
+.form__input {
+  border-radius: 30px;
+  border: 1px solid #a1a1a1;
+  font-size: 16px;
+  padding: 10px 26px;
+}
+
+.form__price {
+  margin-top: 30px;
+}
+
+.form__text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #1c1c1c;
+}
+
+.form__rows {
+  display: flex;
+  gap: 30px;
+  margin-top: 15px;
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  color: #1c1c1c;
+}
+.form__label input {
+  display: none;
+}
+.dot {
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border: 2px solid #d4d4d4;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 12px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+.form__label input:checked + .dot {
+  border-color: #463998;
+  border-width: 2px;
+}
+.dot:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  background-color: #463998;
+  border-radius: 50%;
+}
+.form__label input:checked + .dot:after {
+  display: block;
+}
+
+/* ~~~~~~~ */
+
+.form__food {
+  margin-top: 30px;
+}
+.form__checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  margin-top: 15px;
+}
+.form__checkbox {
+  display: block;
+  position: relative;
+  padding-left: 45px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 28px;
+}
+.form__checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 2px solid #d4d4d4;
+}
+.form__checkbox input:checked ~ .checkmark {
+  background-color: #463998;
+  border-color: #463998;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.form__checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.form__checkbox .checkmark:after {
+  left: 7px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
 }
