@@ -51,6 +51,7 @@ body {
   font-size: 16px;
   line-height: 48px;
   letter-spacing: -0.8%;
+  transition: background-color 0.6s ease-in-out;
 }
 .btn-hover:hover {
   background-color: #cc522b;
@@ -74,8 +75,11 @@ body {
   font-size: 25px;
 }
 .btn-simple__hover:hover {
-  border-bottom: 1px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transition: border-bottom 0.6s linear;
+  transform: scale(1.1);
 }
+
 .btn-simple__red {
   color: #e34444;
 }
@@ -97,6 +101,9 @@ body {
   line-height: 24px;
   font-weight: 400;
   border: 1px solid #e9eaf0;
+  transition:
+    transform 0.3s ease-out,
+    border 0.4s linear;
 }
 .form__input::placeholder {
   color: #8c94a3;
@@ -108,4 +115,7 @@ body {
 .form__input:focus,
 .form__input--active {
   border-color: #ff6636;
+  transition:
+    transform 0.3s ease-out,
+    border 0.4s linear;
 }
