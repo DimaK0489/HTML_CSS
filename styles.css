@@ -3,11 +3,119 @@
   padding: 0;
   box-sizing: border-box;
 }
-
-main {
-  margin: 0;
-  padding: 0;
+body {
+  font-family: "Inter", sans-serif;
 }
-.content-wrapper {
-  background-color: aqua;
+.buttons {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 120px;
+}
+
+.buttons__container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.section-title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 52px;
+  letter-spacing: -2%;
+  color: #1d2026;
+}
+
+.buttons__subtitle {
+  margin-bottom: 16px;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  letter-spacing: 0%;
+  color: #1d2026;
+}
+
+.buttons__list {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.btn-primary {
+  padding: 24px;
+  background-color: #ff6636;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 48px;
+  letter-spacing: -0.8%;
+  transition: background-color 0.6s ease-in-out;
+}
+.btn-hover:hover {
+  background-color: #cc522b;
+}
+.btn-disabled {
+  background-color: #ffddd1;
+}
+
+.btn-simple {
+  color: #23bd33;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -1%;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn-simple .arrow {
+  font-size: 25px;
+}
+.btn-simple__hover:hover {
+  border-bottom: 2px solid currentColor;
+  transition: border-bottom 0.6s linear;
+  transform: scale(1.1);
+}
+
+.btn-simple__red {
+  color: #e34444;
+}
+
+.form__group {
+  margin-top: 16px;
+}
+.form__inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  max-width: 650px;
+}
+.form__input {
+  width: 312px;
+  height: 48px;
+  padding: 12px 18px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  border: 1px solid #e9eaf0;
+  transition:
+    transform 0.3s ease-out,
+    border 0.4s linear;
+}
+.form__input::placeholder {
+  color: #8c94a3;
+}
+.form__input:hover,
+.form__input--hover {
+  border: 3px solid #ffddd1;
+}
+.form__input:focus,
+.form__input--active {
+  border-color: #ff6636;
+  transition:
+    transform 0.3s ease-out,
+    border 0.4s linear;
 }

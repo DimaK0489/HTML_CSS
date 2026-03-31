@@ -10,10 +10,63 @@
   </head>
   <body>
     <main>
-      <div class="content-wrapper">
-        <header>Header</header>
-        <aside>Sidebar</aside>
-        <footer>Footer</footer>
+      <div class="buttons">
+        <div class="buttons__container">
+          <h3 class="buttons__title section-title">Buttons</h3>
+          <!-- Primary -->
+          <div class="buttons__groupe">
+            <h4 class="buttons__subtitle">Primary/Primary</h4>
+            <div class="buttons__list">
+              <button class="btn-primary">Normal</button>
+              <button class="btn-primary btn-hover">Hover</button>
+              <button class="btn-primary btn-disabled" disabled>Disable</button>
+            </div>
+          </div>
+          <!-- Simple Buttons -->
+          <div class="buttons__groupe">
+            <h4 class="buttons__subtitle">Simple Buttons</h4>
+            <div class="buttons__list">
+              <a href="#" class="btn-simple"
+                >Normal <span class="arrow">→</span></a
+              >
+              <a href="#" class="btn-simple btn-simple__hover"
+                >Hover <span class="arrow">→</span></a
+              >
+            </div>
+            <div class="buttons__list">
+              <a href="#" class="btn-simple btn-simple__red"
+                >Normal <span class="arrow">→</span></a
+              >
+              <a href="#" class="btn-simple btn-simple__red btn-simple__hover"
+                >Hover <span class="arrow">→</span></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="buttons__form">
+          <h3 class="form__title section-title">Form elements</h3>
+          <div class="form__group">
+            <h4 class="buttons__subtitle">Input Field</h4>
+            <div class="form__inputs">
+              <input type="text" placeholder="Normal" class="form__input" />
+              <input
+                type="text"
+                placeholder="Hover"
+                class="form__input form__input--hover"
+              />
+              <input
+                type="text"
+                placeholder="Clicked"
+                class="form__input form__input--active"
+              />
+              <input
+                type="text"
+                value="Typing"
+                class="form__input form__input--active"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   </body>
