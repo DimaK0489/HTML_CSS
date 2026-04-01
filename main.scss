@@ -1,0 +1,44 @@
+@import "variables";
+@import "mixins";
+
+.content {
+  background-color: $bg-color;
+  padding: 100px;
+  text-align: center;
+  &__title {
+    color: $dark-color;
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+  &__btn {
+    background-color: $dark-color;
+    color: white;
+    padding: 5px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+
+    &:hover {
+      background-color: $hover-color;
+      transition: transform 0.3s ease;
+      transform: translateY(-5px) scale(1.05);
+    }
+  }
+  @include respond-to("mobile") {
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+  @include respond-to("tablet") {
+    align-items: center;
+  }
+
+  @include respond-to("tablet") {
+    font-size: 48px;
+  }
+
+  @include respond-to("desktop") {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
