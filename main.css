@@ -1,0 +1,46 @@
+.content {
+  background-color: #10d251;
+  padding: 100px;
+  text-align: center;
+}
+.content__title {
+  color: #25262c;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+.content__btn {
+  background-color: #25262c;
+  color: white;
+  padding: 5px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.content__btn:hover {
+  background-color: #ed9a33;
+  transition: transform 0.3s ease;
+  transform: translateY(-5px) scale(1.05);
+}
+@media (min-width: 320px) {
+  .content {
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) {
+  .content {
+    align-items: center;
+  }
+}
+@media (min-width: 768px) {
+  .content {
+    font-size: 48px;
+  }
+}
+@media (min-width: 1200px) {
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}/*# sourceMappingURL=main.css.map */
