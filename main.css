@@ -1,0 +1,183 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000000;
+  font-family: "Alexandria" sans-serif;
+}
+
+.maket .header {
+  padding: 20px 0;
+}
+.maket .header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.maket .header .logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 22px;
+  line-height: 27px;
+  font-weight: 500;
+}
+.maket .header .logo-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 12px;
+}
+.maket .header .nav {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+}
+.maket .header .nav__link {
+  text-decoration: none;
+  color: #999999;
+  transition: color 0.3s ease;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.maket .header .nav__link:hover {
+  color: #ffffff;
+}
+.maket .hero {
+  display: flex;
+  align-items: center;
+  padding: 88px 0;
+}
+.maket .hero .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+.maket .hero__content .batch {
+  display: inline-block;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  background: linear-gradient(#000000) padding-box, linear-gradient(to right, #4d4d4d, #b3b3b3) border-box;
+  border-radius: 100px;
+  color: #9dff3a;
+  margin-bottom: 25px;
+}
+.maket .hero__content .title {
+  margin-bottom: 25px;
+  color: #e5e5e5;
+  font-size: 64px;
+  line-height: 110%;
+  font-weight: 700;
+}
+.maket .hero__content .description {
+  margin-bottom: 25px;
+  font-family: "Inter" sans-serif;
+  color: #999999;
+  max-width: 480px;
+  font-size: 20px;
+  line-height: 140%;
+  font-weight: 400;
+}
+.maket .hero__content .btn-primary {
+  display: inline-block;
+  background-color: #9dff3a;
+  color: #000000;
+  padding: 14px 30px;
+  border-radius: 100px;
+  text-decoration: none;
+  transition: transform 0.5s ease;
+}
+.maket .hero__content .btn-primary:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(180, 141, 11, 0.2);
+}
+.maket .hero__image {
+  display: flex;
+  justify-content: center;
+}
+.maket .hero__image img {
+  max-width: 100%;
+}
+.maket .brands {
+  background-color: #0f0f0f;
+  text-align: center;
+  padding: 40px 0;
+}
+.maket .brands__title {
+  margin-bottom: 30px;
+  color: #999999;
+  font-size: 16px;
+  line-height: 100%;
+  font-weight: 400;
+}
+.maket .brands__all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 72px;
+}
+.maket .brands__logo {
+  height: 30px;
+  width: auto;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+.maket .brands__logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+.maket .feature__header {
+  margin-top: 80px;
+  text-align: center;
+}
+.maket .feature__header .batch {
+  display: inline-block;
+  border: 1px solid #2e2e2e;
+  border-radius: 100px;
+  padding: 12px 20px;
+  color: #9dff3a;
+  margin-bottom: 20px;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+.maket .feature__header .title {
+  color: #e5e5e5;
+  margin-bottom: 20px;
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: 400;
+}
+.maket .feature__header .description {
+  margin: 0 auto;
+  max-width: 600px;
+  font-family: "Inter" sans-serif;
+  color: #999999;
+  font-size: 18px;
+  line-height: 140%;
+  font-weight: 400;
+}
+.maket .feature__row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.maket .feature__row .feature-card {
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: linear-gradient(#000000) padding-box, linear-gradient(to right, #4d4d4d, #b3b3b3) border-box;
+}/*# sourceMappingURL=main.css.map */

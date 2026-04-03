@@ -1,0 +1,187 @@
+@import "variables";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $black-color;
+  font-family: "Alexandria" sans-serif;
+}
+
+.maket {
+  .header {
+    padding: 20px 0;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      @include flex-between;
+    }
+
+    .logo {
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      color: $text-white;
+      @include font(22px, 27px, 500);
+
+      &-icon {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 12px;
+      }
+    }
+
+    .nav {
+      display: flex;
+      column-gap: 40px;
+
+      &__link {
+        text-decoration: none;
+        color: $grey-color;
+        transition: color 0.3s ease;
+        @include font(16px, 20px, 400);
+        &:hover {
+          color: $text-white;
+        }
+      }
+    }
+  }
+
+  .hero {
+    display: flex;
+    align-items: center;
+    padding: 88px 0;
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    &__content {
+      .batch {
+        display: inline-block;
+        padding: 10px 12px;
+        border: 1px solid transparent;
+        background:
+          linear-gradient($black-color) padding-box,
+          linear-gradient(to right, $linear-color1, $linear-color2) border-box;
+        border-radius: 100px;
+        color: $green-color;
+        margin-bottom: 25px;
+      }
+      .title {
+        margin-bottom: 25px;
+        color: $title-white;
+        @include font(64px, 110%, 700);
+      }
+      .description {
+        margin-bottom: 25px;
+        font-family: "Inter" sans-serif;
+        color: $grey-color;
+        max-width: 480px;
+        @include font(20px, 140%, 400);
+      }
+      .btn-primary {
+        display: inline-block;
+        background-color: $green-color;
+        color: $black-color;
+        padding: 14px 30px;
+        border-radius: 100px;
+        text-decoration: none;
+        transition: transform 0.5s ease;
+
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 20px rgba($orange-color, 0.2);
+        }
+      }
+    }
+    &__image {
+      display: flex;
+      justify-content: center;
+
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
+  .brands {
+    background-color: $gray4-color;
+    text-align: center;
+    padding: 40px 0;
+    &__title {
+      margin-bottom: 30px;
+      color: $grey-color;
+      @include font(16px, 100%, 400);
+    }
+    &__all {
+      @include flex-between;
+      // flex-wrap: wrap;
+      gap: 72px;
+    }
+    &__logo {
+      height: 30px;
+      width: auto;
+      opacity: 0.6;
+      transition: all 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .feature {
+    &__header {
+      margin-top: 80px;
+      text-align: center;
+      .batch {
+        display: inline-block;
+        border: 1px solid $gray3-color;
+        border-radius: 100px;
+        padding: 12px 20px;
+        color: $green-color;
+        margin-bottom: 20px;
+        @include font(14px, 17px, 400);
+      }
+      .title {
+        color: $title-white;
+        margin-bottom: 20px;
+        @include font(48px, 100%, 400);
+      }
+      .description {
+        margin: 0 auto;
+        max-width: 600px;
+        font-family: "Inter" sans-serif;
+        color: $grey-color;
+        @include font(18px, 140%, 400);
+      }
+    }
+    &__row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      .feature-card {
+        border-radius: 12px;
+        border: 1px solid transparent;
+        background:
+          linear-gradient($black-color) padding-box,
+          linear-gradient(to right, $linear-color1, $linear-color2) border-box;
+      }
+    }
+  }
+}
