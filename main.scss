@@ -1,0 +1,90 @@
+@import "variables";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+  text-align: center;
+  padding: 40px 30px;
+  background: url(images/cros.jpg) no-repeat center center / cover fixed
+    $bg-color;
+  height: 100vh;
+  @include respond-to("tablet") {
+    padding: 66px 35px;
+  }
+  @include respond-to("mobile") {
+    height: max-content;
+    padding: 82px 35px;
+  }
+
+  &__title {
+    color: $text-color;
+    font-style: italic;
+    max-width: 900px;
+    @include font(60px, 60px, 600);
+    @include respond-to("tablet") {
+      font-size: 48px;
+      line-height: 48px;
+    }
+    @include respond-to("mobile") {
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
+  &__text {
+    color: $text-color;
+    @include font(24px, 32px, 500);
+    max-width: 670px;
+    @include respond-to("tablet") {
+      font-size: 18px;
+      line-height: 28px;
+      max-width: 380px;
+    }
+    @include respond-to("mobile") {
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+  &__buttons {
+    display: flex;
+    width: 100%;
+    max-width: 698px;
+  }
+  &__input {
+    flex-grow: 1;
+    padding: 12px;
+    border: 1px solid $border-color;
+    font-size: 14px;
+    line-height: 24px;
+    @include respond-to("mobile") {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+  &__btn {
+    border: none;
+    padding: 13px 16px;
+    color: $text-color;
+    background-color: $black-color;
+    font-size: 18px;
+    line-height: 28px;
+    @include respond-to("mobile") {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}

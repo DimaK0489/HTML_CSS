@@ -1,0 +1,19 @@
+$breakpoints: (
+  "mobile": 767px,
+  "tablet": 1024px,
+);
+
+@mixin respond-to($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  @if $value {
+    @media (max-width: $value) {
+      @content;
+    }
+  }
+}
+
+@mixin font($font-size, $line-height, $font-weight) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+}
