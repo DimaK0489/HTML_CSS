@@ -7,11 +7,8 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-.product {
+.products {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
   background-color: #0f0f0f;
   padding: 187px 80px;
 }
@@ -37,7 +34,7 @@ body {
 
 .product__text {
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 150%;
   color: #1f1f1f;
 }
@@ -61,20 +58,27 @@ body {
   font-size: 20px;
 }
 
-@media (min-width: 320px) {
-}
-
 @media (min-width: 768px) {
+  .products {
+    padding: 215px 15px 245px;
+  }
   .container {
     width: max-content;
     margin-right: auto;
-    padding: 18px 24px;
+    padding: 50px 70px 50px 50px;
   }
 
   .product__title {
     font-size: 40px;
   }
   .product__text {
+    font-size: 16px;
+  }
+  .product__button {
+    width: max-content;
+    align-self: flex-start;
+    margin-right: auto;
+    padding: 18px 24px;
     font-size: 16px;
   }
 }
@@ -98,5 +102,6 @@ body {
     font-size: 14px;
     padding: 14px 20px;
     white-space: nowrap;
+    align-items: center;
   }
 }
