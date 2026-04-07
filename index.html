@@ -14,9 +14,33 @@
   </head>
   <body>
     <div class="pictures">
-      <div class="swiper">
-        <div class="swiper-wrapper">
+      <div class="container">
+        <div class="swiper">
           <!-- Slide #1 -->
+          <div class="swiper-slide">
+            <div class="picture">
+              <img
+                class="picture__image"
+                src="images/rose.png"
+                alt="Rose gold"
+              />
+              <div class="picture__content">
+                <h3 class="picture__title">
+                  We Have Small And Best O2 Plants Collection's
+                </h3>
+                <p class="picture__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <p class="picture__text">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+                <button class="picture__btn">Explore</button>
+              </div>
+            </div>
+          </div>
+          <!-- Slide #2 -->
           <div class="swiper-slide">
             <div class="picture">
               <img
@@ -42,10 +66,10 @@
           </div>
         </div>
 
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
       </div>
+      <div class="swiper-pagination"></div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script>
@@ -53,32 +77,32 @@
         loop: true,
         slidesPerView: 1,
         spaceBetween: 20,
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 1,
-            spaceBetween: 30,
-          },
-        },
+        // breakpoints: {
+        //   320: {
+        //     slidesPerView: 1,
+        //     spaceBetween: 10,
+        //   },
+        //   768: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 20,
+        //   },
+        //   1024: {
+        //     slidesPerView: 1,
+        //     spaceBetween: 30,
+        //   },
+        // },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
 
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        scrollbar: {
-          el: ".swiper-scrollbar",
-        },
+        // navigation: {
+        //   nextEl: ".swiper-button-next",
+        //   prevEl: ".swiper-button-prev",
+        // },
+        // scrollbar: {
+        //   el: ".swiper-scrollbar",
+        // },
       });
     </script>
   </body>

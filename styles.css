@@ -10,21 +10,33 @@ body {
 }
 
 .pictures {
+  padding: 451px 0 351px;
+}
+
+.container {
+  max-width: 1630px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.swiper {
   border: 3px solid #fff;
   border-radius: 92px;
-  margin: 40px;
 }
+
 .picture {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-  padding: 40px;
+  padding: 137px 62px;
+  column-gap: 50px;
 }
 
 .picture__image {
-  width: 400px;
-  height: 400px;
+  width: 49%;
+  object-fit: contain;
+  aspect-ratio: 1 / 0.67;
 }
 
 .picture__content {
@@ -47,17 +59,33 @@ body {
 }
 
 .picture__btn {
-  width: 220px;
+  width: max-content;
   background: transparent;
   border: 2px solid #fff;
   font-weight: 400;
   font-size: 28px;
   line-height: 34px;
   color: #fff;
-  padding: 12px 40px;
+  padding: 15px 59px;
   border-radius: 12px;
   cursor: pointer;
   transition: 0.3s;
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 157px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 16px;
+}
+.swiper-pagination-bullet {
+  width: 11px;
+  height: 11px;
+  margin: 0 !important;
+  background-color: #fff;
+  opacity: 0.75;
 }
 
 /* Стилизация буллетов */
@@ -66,7 +94,6 @@ body {
   width: 30px !important;
   border-radius: 5px !important;
   position: relative !important;
-  background-color: #ff4b4b;
 }
 
 /* Кастомизация кнопок навигации */
