@@ -7,44 +7,55 @@
     <link href="https://fonts.googleapis.com" rel="stylesheet" />
     <link rel="stylesheet" href="main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Website</title>
   </head>
   <body>
-    <div class="maket">
-      <header class="header">
-        <div class="container">
-          <a href="#" class="logo" aria-label="NeoFi logo">
-            <img
-              class="logo-icon"
-              src="images/logo.png"
-              alt="logo"
-              loading="lazy"
-            />
-            <span>NeoFi</span>
-          </a>
-          <nav class="nav">
-            <a href="#" class="nav__link">Home</a>
-            <a href="#" class="nav__link">Features</a>
-            <a href="#" class="nav__link">Testimonial</a>
-            <a href="#" class="nav__link">FAQ</a>
-          </nav>
-        </div>
-      </header>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo" aria-label="NeoFi logo">
+          <img
+            class="logo-icon"
+            src="images/logo.png"
+            alt="logo"
+            loading="lazy"
+          />
+          <span>NeoFi</span>
+        </a>
+        <a href="#" class="logo" aria-label="button">
+          <img
+            class="logo-btn"
+            src="images/icon_btn.png"
+            alt="btn"
+            loading="lazy"
+          />
+        </a>
+        <nav class="nav">
+          <a href="#" class="nav__link">Home</a>
+          <a href="#" class="nav__link">Features</a>
+          <a href="#" class="nav__link">Testimonial</a>
+          <a href="#" class="nav__link">FAQ</a>
+        </nav>
+      </div>
+    </header>
+    <main>
       <section class="hero">
         <div class="container">
           <div class="hero__content">
             <span class="batch">Decentralised</span>
-            <h2 class="title">
-              Revolutionizing <br />
-              Web3 Finance
-            </h2>
+            <h1 class="title">Revolutionizing <span>Web3 Finance</span></h1>
             <p class="description">
               Secure, scalable, and decentralized solutions for your digital
               assets—experience the future of financial freedom.
             </p>
-            <a href="#" class="btn-primary">Get Started</a>
+            <button class="btn-primary">Get Started</button>
           </div>
-          <div class="hero__image">
-            <img src="images/flower.png" alt="Flower 3D" loading="lazy" />
+          <div class="hero__wrapper-img">
+            <img
+              class="img hero__img"
+              src="images/Shape-2.png"
+              alt="Flower 3D"
+              loading="lazy"
+            />
           </div>
         </div>
       </section>
@@ -136,6 +147,6 @@
           </div>
         </div>
       </section>
-    </div>
+    </main>
   </body>
 </html>
