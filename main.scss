@@ -226,8 +226,8 @@ img {
     }
   }
   &__row {
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
     text-align: center;
     gap: 16px;
     @include respond-to("desktop") {
@@ -258,5 +258,57 @@ img {
         padding: 0 20px;
       }
     }
+  }
+}
+
+.statistics {
+  background-color: $gray4-color;
+  padding: 40px 20px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &__batch {
+    display: inline-block;
+    color: $green-color;
+    padding: 12px 20px;
+    border: 1px solid $gray3-color;
+    border-radius: 100px;
+    margin-bottom: 16px;
+  }
+  &__title {
+    color: $title-white;
+    @include font(28px, 100%, 400);
+    margin-bottom: 16px;
+  }
+  &__description {
+    max-width: 544px;
+    color: $grey-color;
+    @include font(14px, 17px, 400);
+    margin-bottom: 32px;
+  }
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 24px;
+
+    @include respond-to("desktop") {
+      justify-content: center;
+      flex-direction: row;
+      gap: 72px;
+    }
+  }
+  &__total {
+    @include font(48px, 100%, 400);
+    color: $green-color;
+    margin-bottom: 12px;
+  }
+  &__descriptions {
+    @include font(20px, 140%, 400);
+    color: $grey-color;
   }
 }
