@@ -317,6 +317,9 @@ img {
   text-align: center;
 }
 .statistics__batch {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
   display: inline-block;
   color: #9dff3a;
   padding: 12px 20px;
@@ -365,4 +368,142 @@ img {
   line-height: 140%;
   font-weight: 400;
   color: #999999;
+}
+
+.blockchain {
+  padding: 40px 20px;
+}
+.blockchain .container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+@media (min-width: 1024px) {
+  .blockchain__info {
+    margin: 0 auto;
+    max-width: 890px;
+  }
+}
+.blockchain__batch {
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+  display: inline-block;
+  color: #9dff3a;
+  padding: 12px 20px;
+  border: 1px solid #2e2e2e;
+  border-radius: 24px;
+  margin-bottom: 16px;
+}
+@media (min-width: 1024px) {
+  .blockchain__batch {
+    font-size: 14px;
+    line-height: 100%;
+    font-weight: 400;
+  }
+}
+.blockchain__title {
+  color: #e5e5e5;
+  font-size: 28px;
+  line-height: 100%;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+@media (min-width: 1024px) {
+  .blockchain__title {
+    font-size: 48px;
+    line-height: 100%;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+}
+.blockchain__text {
+  color: #999999;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+  font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .blockchain__text {
+    font-size: 18px;
+    line-height: 140%;
+    font-weight: 400;
+    padding: 0 123px;
+  }
+}
+.blockchain__main-content {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1024px) {
+  .blockchain__main-content {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+  }
+}
+.blockchain__img {
+  margin: 0 auto;
+}
+@media (min-width: 1024px) {
+  .blockchain__img {
+    flex: 1;
+    max-width: 506px;
+  }
+}
+.blockchain__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+@media (min-width: 1024px) {
+  .blockchain__list {
+    flex: 1;
+    margin: 0;
+  }
+}
+.blockchain__block {
+  padding: 24px 20px;
+  border-radius: 20px;
+  border: 1px solid transparent;
+  background: linear-gradient(#000000) padding-box, linear-gradient(to left, #4d4d4d, #b3b3b3) border-box;
+}
+.blockchain .card {
+  display: flex;
+  gap: 22px;
+}
+.blockchain .card__icon {
+  flex-shrink: 0;
+  max-width: 25px;
+  max-height: 25px;
+}
+.blockchain .card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.blockchain .card__title {
+  font-family: "Inter", sans-serif;
+  color: #e5e5e5;
+  font-size: 20px;
+  line-height: 140%;
+  font-weight: 400;
+  text-align: start;
+}
+.blockchain .card__text {
+  text-align: start;
+  color: #999999;
+  font-size: 14px;
+  line-height: 17px;
+  font-weight: 400;
+}
+@media (min-width: 1024px) {
+  .blockchain .card__text {
+    font-size: 16px;
+    line-height: 100%;
+    font-weight: 400;
+  }
 }/*# sourceMappingURL=main.css.map */

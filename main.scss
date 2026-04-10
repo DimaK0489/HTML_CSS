@@ -271,6 +271,7 @@ img {
     text-align: center;
   }
   &__batch {
+    @include font(14px, 17px, 400);
     display: inline-block;
     color: $green-color;
     padding: 12px 20px;
@@ -310,5 +311,121 @@ img {
   &__descriptions {
     @include font(20px, 140%, 400);
     color: $grey-color;
+  }
+}
+
+.blockchain {
+  padding: 40px 20px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    // @include respond-to("desktop") {
+    //   justify-content: center;
+    //   flex-direction: column;
+    //   gap: 72px;
+    // }
+  }
+  &__info {
+    @include respond-to("desktop") {
+      margin: 0 auto;
+      max-width: 890px;
+    }
+  }
+  &__batch {
+    @include font(14px, 17px, 400);
+    display: inline-block;
+    color: $green-color;
+    padding: 12px 20px;
+    border: 1px solid $gray3-color;
+    border-radius: 24px;
+    margin-bottom: 16px;
+    @include respond-to("desktop") {
+      @include font(14px, 100%, 400);
+    }
+  }
+  &__title {
+    color: $title-white;
+    @include font(28px, 100%, 400);
+    margin-bottom: 16px;
+
+    @include respond-to("desktop") {
+      @include font(48px, 100%, 400);
+      margin-bottom: 20px;
+    }
+  }
+  &__text {
+    color: $grey-color;
+    font-family: "Inter", sans-serif;
+    @include font(16px, 140%, 400);
+
+    @include respond-to("desktop") {
+      @include font(18px, 140%, 400);
+      padding: 0 123px;
+    }
+  }
+  &__main-content {
+    display: flex;
+    flex-direction: column;
+    @include respond-to("desktop") {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 80px;
+    }
+  }
+  &__img {
+    margin: 0 auto;
+    @include respond-to("desktop") {
+      flex: 1;
+      max-width: 506px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+    @include respond-to("desktop") {
+      flex: 1;
+      margin: 0;
+    }
+  }
+  &__block {
+    padding: 24px 20px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background:
+      linear-gradient($black-color) padding-box,
+      linear-gradient(to left, $linear-color1, $linear-color2) border-box;
+  }
+  .card {
+    display: flex;
+    gap: 22px;
+    &__icon {
+      flex-shrink: 0;
+      max-width: 25px;
+      max-height: 25px;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    &__title {
+      font-family: "Inter", sans-serif;
+      color: $title-white;
+      @include font(20px, 140%, 400);
+      text-align: start;
+    }
+    &__text {
+      text-align: start;
+      color: $grey-color;
+      @include font(14px, 17px, 400);
+      @include respond-to("desktop") {
+        @include font(16px, 100%, 400);
+      }
+    }
   }
 }
