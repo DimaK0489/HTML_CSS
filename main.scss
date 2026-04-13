@@ -138,8 +138,10 @@ img {
     }
   }
   &__wrapper-img {
-    margin-top: 32px;
-    margin-bottom: 40px;
+    margin: 32px 13px;
+    @include respond-to("desktop") {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -164,7 +166,7 @@ img {
     gap: 20px;
 
     @include respond-to("desktop") {
-      gap: 72px;
+      gap: 32px;
     }
   }
   &__logo {
@@ -186,6 +188,9 @@ img {
 }
 
 .feature {
+  @include respond-to("desktop") {
+    padding: 60px 120px;
+  }
   .container {
     padding: 40px 20px;
   }
@@ -255,7 +260,7 @@ img {
         color: $grey-color;
         @include font(16px, 20px, 400);
         margin-bottom: 30px;
-        padding: 0 20px;
+        padding: 0 24px;
       }
     }
   }
@@ -278,17 +283,28 @@ img {
     border: 1px solid $gray3-color;
     border-radius: 100px;
     margin-bottom: 16px;
+    @include respond-to("desktop") {
+      margin-bottom: 20px;
+    }
   }
   &__title {
     color: $title-white;
     @include font(28px, 100%, 400);
     margin-bottom: 16px;
+    @include respond-to("desktop") {
+      @include font(48px, 100%, 400);
+      margin-bottom: 20px;
+    }
   }
   &__description {
     max-width: 544px;
     color: $grey-color;
     @include font(14px, 17px, 400);
     margin-bottom: 32px;
+    @include respond-to("desktop") {
+      @include font(18px, 140%, 400);
+      margin-bottom: 72px;
+    }
   }
   &__list {
     list-style-type: none;
@@ -316,16 +332,16 @@ img {
 
 .blockchain {
   padding: 40px 20px;
+  @include respond-to("desktop") {
+    padding: 60px 120px;
+  }
   .container {
     display: flex;
     flex-direction: column;
     text-align: center;
-
-    // @include respond-to("desktop") {
-    //   justify-content: center;
-    //   flex-direction: column;
-    //   gap: 72px;
-    // }
+    @include respond-to("desktop") {
+      margin: 0 auto;
+    }
   }
   &__info {
     @include respond-to("desktop") {
@@ -427,5 +443,177 @@ img {
         @include font(16px, 100%, 400);
       }
     }
+  }
+}
+
+.cta {
+  padding: 40px 20px;
+  background-color: $gray4-color;
+  text-align: center;
+  .container {
+    max-width: 330px;
+    margin: 0 auto;
+    @include respond-to("desktop") {
+      max-width: 676px;
+    }
+  }
+  &__batch {
+    @include font(14px, 17px, 400);
+    color: $green-color;
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid $gray3-color;
+    border-radius: 24px;
+    margin-bottom: 20px;
+    @include respond-to("desktop") {
+      @include font(14px, 100%, 400);
+    }
+  }
+  &__title {
+    @include font(28px, 100%, 400);
+    color: $title-white;
+    margin-bottom: 20px;
+    @include respond-to("desktop") {
+      @include font(48px, 100%, 400);
+    }
+  }
+  &__text {
+    @include font(16px, 140%, 400);
+    color: $grey-color;
+    margin-bottom: 20px;
+
+    @include respond-to("desktop") {
+      @include font(18px, 140%, 400);
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+  &__button {
+    padding: 14px 24px;
+    background-color: $green-color;
+    margin-bottom: 20px;
+    border: none;
+
+    color: $black-color;
+    @include font(18px, 22px, 400);
+    @include respond-to("desktop") {
+      @include font(18px, 100%, 400);
+    }
+  }
+}
+
+.footer {
+  padding: 20px 40px 0 40px;
+  @include respond-to("desktop") {
+    padding: 80px 120px 0 120px;
+  }
+  .container {
+    @include flex-column;
+  }
+  &__content {
+    @include respond-to("desktop") {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    color: $text-white;
+    @include font(22px, 27px, 500);
+    margin-bottom: 40px;
+
+    @include respond-to("desktop") {
+      align-self: flex-start;
+    }
+    &-img {
+      width: 32px;
+      height: auto;
+    }
+  }
+  &__subtitle {
+    color: $title-white;
+    font-family: "Inter", sans-serif;
+    @include font(20px, 140%, 400);
+    margin-bottom: 12px;
+  }
+  &__nav {
+    @include respond-to("desktop") {
+      align-self: flex-start;
+    }
+  }
+  &__links {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__list {
+    padding: 0;
+    margin: 0;
+
+    &-li {
+      margin-bottom: 9px;
+    }
+    &-link {
+      text-decoration: none;
+      color: $grey-color;
+      @include font(14px, 100%, 400);
+    }
+  }
+  &__title {
+    font-family: "Inter", sans-serif;
+    color: $gray2-color;
+    @include font(20px, 140%, 400);
+    margin-bottom: 20px;
+    @include respond-to("desktop") {
+      align-self: flex-start;
+    }
+  }
+  &__subscribe {
+    @include respond-to("desktop") {
+      align-self: flex-start;
+    }
+    .subscribe-form {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.5px solid $grey-color;
+      padding-bottom: 16px;
+      &__input {
+        background: transparent;
+        border: none;
+        width: 100%;
+        outline: none;
+
+        &::placeholder {
+          color: $grey-color;
+          @include font(14px, 17px, 400);
+        }
+      }
+      &__btn {
+        background-color: $green-color;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        cursor: pointer;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    text-align: center;
+    color: $grey-color;
+    margin: 20px auto;
+    @include font(12px, 15px, 400);
   }
 }
