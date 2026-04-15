@@ -1,0 +1,623 @@
+@import "variables";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $black-color;
+  font-family: "Alexandria", sans-serif;
+}
+
+img {
+  object-fit: contain;
+  width: 100%;
+}
+
+.header {
+  padding: 20px;
+  width: 100%;
+  @include respond-to("desktop") {
+    padding: 20px 120px;
+  }
+
+  .container {
+    margin: 0 auto;
+    @include flex-between;
+  }
+
+  .logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: $text-white;
+    @include font(22px, 27px, 500);
+
+    &-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 12px;
+    }
+    &-btn {
+      display: flex;
+      width: 18px;
+      height: 12px;
+      @include respond-to("desktop") {
+        display: none;
+      }
+    }
+  }
+
+  .nav {
+    display: none;
+    column-gap: 40px;
+    @include respond-to("desktop") {
+      display: flex;
+    }
+    &__link {
+      text-decoration: none;
+      color: $grey-color;
+      transition: color 0.3s ease;
+      @include font(16px, 20px, 400);
+      &:hover {
+        color: $text-white;
+      }
+    }
+  }
+}
+
+.hero {
+  padding: 0 20px;
+  @include respond-to("desktop") {
+    padding: 20px 120px;
+  }
+  .container {
+    @include respond-to("desktop") {
+      @include flex-between;
+    }
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @include respond-to("desktop") {
+      align-items: flex-start;
+      text-align: start;
+      gap: 8px;
+    }
+    .batch {
+      display: inline-block;
+      padding: 10px 12px;
+      border: 1px solid transparent;
+      background:
+        linear-gradient($black-color) padding-box,
+        linear-gradient(to right, $linear-color1, $linear-color2) border-box;
+      border-radius: 100px;
+      color: $green-color;
+      margin-bottom: 16px;
+      @include font(14px, 17px, 400);
+    }
+    .title {
+      span {
+        display: block;
+      }
+
+      margin-bottom: 16px;
+      color: $title-white;
+      @include font(40px, 110%, 500);
+      @include respond-to("desktop") {
+        @include font(64px, 110%, 700);
+      }
+    }
+    .description {
+      margin-bottom: 32px;
+      color: $grey-color;
+      @include font(20px, 20px, 400);
+      @include respond-to("desktop") {
+        max-width: 535px;
+        @include font(20px, 140%, 400);
+      }
+    }
+    .btn-primary {
+      display: inline-block;
+      background-color: $green-color;
+      color: $black-color;
+      padding: 14px 24px;
+      border-radius: 100px;
+      text-decoration: none;
+      transition: transform 0.5s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba($orange-color, 0.2);
+      }
+    }
+  }
+  &__wrapper-img {
+    margin: 32px 13px;
+    @include respond-to("desktop") {
+      margin: 0 auto;
+    }
+  }
+}
+
+.brands {
+  background-color: $gray4-color;
+  text-align: center;
+  padding: 40px 36px;
+
+  &__title {
+    margin-bottom: 32px;
+    color: $grey-color;
+    @include font(16px, 20px, 400);
+    @include respond-to("desktop") {
+      margin-bottom: 40px;
+    }
+  }
+  &__all {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+
+    @include respond-to("desktop") {
+      gap: 32px;
+    }
+  }
+  &__logo {
+    height: 23px;
+    width: auto;
+    object-fit: contain;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+
+    @include respond-to("desktop") {
+      height: 32px;
+    }
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.05);
+    }
+  }
+}
+
+.feature {
+  @include respond-to("desktop") {
+    padding: 60px 120px;
+  }
+  .container {
+    padding: 40px 20px;
+  }
+  &__header {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 544px;
+    .batch {
+      display: inline-block;
+      border: 1px solid $gray3-color;
+      border-radius: 100px;
+      padding: 12px 20px;
+      color: $green-color;
+      margin-bottom: 16px;
+      @include font(14px, 17px, 400);
+      @include respond-to("desktop") {
+        margin-bottom: 20px;
+      }
+    }
+    .title {
+      color: $title-white;
+      margin-bottom: 16px;
+      @include font(28px, 100%, 400);
+      @include respond-to("desktop") {
+        @include font(48px, 100%, 400);
+        margin-bottom: 20px;
+      }
+    }
+    .description {
+      color: $grey-color;
+      @include font(16px, 20px, 400);
+      margin-bottom: 32px;
+      @include respond-to("desktop") {
+        font-family: "Inter", sans-serif;
+        @include font(18px, 140%, 400);
+        margin-bottom: 80px;
+      }
+    }
+  }
+  &__row {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+    @include respond-to("desktop") {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+  }
+  &__card {
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background:
+      linear-gradient($black-color) padding-box,
+      linear-gradient(to right, $linear-color1, $linear-color2) border-box;
+  }
+  &__card-icon {
+    margin: 20px;
+    width: 36px;
+    height: auto;
+  }
+  &__title {
+    font-family: "Inter", sans-serif;
+    color: $title-white;
+    @include font(20px, 140%, 400);
+    margin-bottom: 16px;
+  }
+  &__desc {
+    color: $grey-color;
+    @include font(16px, 20px, 400);
+    margin-bottom: 30px;
+    padding: 0 24px;
+  }
+}
+
+.statistics {
+  background-color: $gray4-color;
+  padding: 40px 20px;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  &__batch {
+    @include font(14px, 17px, 400);
+    display: inline-block;
+    color: $green-color;
+    padding: 12px 20px;
+    border: 1px solid $gray3-color;
+    border-radius: 100px;
+    margin-bottom: 16px;
+    @include respond-to("desktop") {
+      margin-bottom: 20px;
+    }
+  }
+  &__title {
+    color: $title-white;
+    @include font(28px, 100%, 400);
+    margin-bottom: 16px;
+    @include respond-to("desktop") {
+      @include font(48px, 100%, 400);
+      margin-bottom: 20px;
+    }
+  }
+  &__description {
+    max-width: 544px;
+    color: $grey-color;
+    @include font(14px, 17px, 400);
+    margin-bottom: 32px;
+    @include respond-to("desktop") {
+      @include font(18px, 140%, 400);
+      margin-bottom: 72px;
+    }
+  }
+  &__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    gap: 24px;
+
+    @include respond-to("desktop") {
+      justify-content: center;
+      flex-direction: row;
+      gap: 72px;
+    }
+  }
+  &__total {
+    @include font(48px, 100%, 400);
+    color: $green-color;
+    margin-bottom: 12px;
+  }
+  &__descriptions {
+    @include font(20px, 140%, 400);
+    color: $grey-color;
+  }
+}
+
+.blockchain {
+  padding: 40px 20px;
+  @include respond-to("desktop") {
+    padding: 60px 120px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    @include respond-to("desktop") {
+      margin: 0 auto;
+    }
+  }
+  &__info {
+    @include respond-to("desktop") {
+      margin: 0 auto;
+      max-width: 890px;
+    }
+  }
+  &__batch {
+    @include font(14px, 17px, 400);
+    display: inline-block;
+    color: $green-color;
+    padding: 12px 20px;
+    border: 1px solid $gray3-color;
+    border-radius: 24px;
+    margin-bottom: 16px;
+    @include respond-to("desktop") {
+      @include font(14px, 100%, 400);
+    }
+  }
+  &__title {
+    color: $title-white;
+    @include font(28px, 100%, 400);
+    margin-bottom: 16px;
+
+    @include respond-to("desktop") {
+      @include font(48px, 100%, 400);
+      margin-bottom: 20px;
+    }
+  }
+  &__text {
+    color: $grey-color;
+    font-family: "Inter", sans-serif;
+    @include font(16px, 140%, 400);
+
+    @include respond-to("desktop") {
+      @include font(18px, 140%, 400);
+      padding: 0 123px;
+    }
+  }
+  &__main-content {
+    display: flex;
+    flex-direction: column;
+    @include respond-to("desktop") {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 80px;
+    }
+  }
+  &__img {
+    margin: 0 auto;
+
+    @include respond-to("desktop") {
+      flex: 1;
+      max-width: 506px;
+      padding-right: 72px;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 32px;
+    @include respond-to("desktop") {
+      flex: 1;
+      margin: 0;
+    }
+  }
+  &__block {
+    padding: 24px 20px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    background:
+      linear-gradient($black-color) padding-box,
+      linear-gradient(to left, $linear-color1, $linear-color2) border-box;
+  }
+  .card {
+    display: flex;
+    gap: 22px;
+    &__icon {
+      flex-shrink: 0;
+      max-width: 25px;
+      max-height: 25px;
+    }
+    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    &__title {
+      font-family: "Inter", sans-serif;
+      color: $title-white;
+      @include font(20px, 140%, 400);
+      text-align: start;
+    }
+    &__text {
+      text-align: start;
+      color: $grey-color;
+      @include font(14px, 17px, 400);
+      @include respond-to("desktop") {
+        @include font(16px, 100%, 400);
+      }
+    }
+  }
+}
+
+.cta {
+  padding: 40px 20px;
+  background-color: $gray4-color;
+  text-align: center;
+  .container {
+    max-width: 330px;
+    margin: 0 auto;
+    @include respond-to("desktop") {
+      max-width: 676px;
+    }
+  }
+  &__batch {
+    @include font(14px, 17px, 400);
+    color: $green-color;
+    display: inline-block;
+    padding: 12px 20px;
+    border: 1px solid $gray3-color;
+    border-radius: 24px;
+    margin-bottom: 20px;
+    @include respond-to("desktop") {
+      @include font(14px, 100%, 400);
+    }
+  }
+  &__title {
+    @include font(28px, 100%, 400);
+    color: $title-white;
+    margin-bottom: 20px;
+    @include respond-to("desktop") {
+      @include font(48px, 100%, 400);
+    }
+  }
+  &__text {
+    @include font(16px, 140%, 400);
+    color: $grey-color;
+    margin-bottom: 20px;
+
+    @include respond-to("desktop") {
+      @include font(18px, 140%, 400);
+      max-width: 600px;
+      margin: 0 auto;
+      margin-bottom: 20px;
+    }
+  }
+  &__button {
+    padding: 14px 24px;
+    background-color: $green-color;
+    margin-bottom: 20px;
+    border: none;
+
+    color: $black-color;
+    @include font(18px, 22px, 400);
+    @include respond-to("desktop") {
+      @include font(18px, 100%, 400);
+    }
+  }
+}
+
+.footer {
+  padding: 20px 40px 0 40px;
+  @include respond-to("desktop") {
+    padding: 80px 120px 0 120px;
+  }
+  .container {
+    @include flex-column;
+  }
+  &__content {
+    @include respond-to("desktop") {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 11px;
+    color: $text-white;
+    @include font(22px, 27px, 500);
+    margin-bottom: 40px;
+
+    @include respond-to("desktop") {
+      align-self: flex-start;
+    }
+    &-img {
+      width: 32px;
+      height: auto;
+    }
+  }
+  &__subtitle {
+    color: $title-white;
+    font-family: "Inter", sans-serif;
+    @include font(20px, 140%, 400);
+    margin-bottom: 12px;
+  }
+  &__nav {
+    @include respond-to("desktop") {
+      align-self: flex-start;
+    }
+  }
+  &__links {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  &__list {
+    padding: 0;
+    margin: 0;
+
+    &-li {
+      margin-bottom: 9px;
+    }
+    &-link {
+      text-decoration: none;
+      color: $grey-color;
+      @include font(14px, 100%, 400);
+    }
+  }
+  &__title {
+    font-family: "Inter", sans-serif;
+    color: $gray2-color;
+    @include font(20px, 140%, 400);
+    margin-bottom: 20px;
+    @include respond-to("desktop") {
+      align-self: flex-start;
+    }
+  }
+  &__subscribe {
+    @include respond-to("desktop") {
+      align-self: flex-start;
+    }
+    .subscribe-form {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 0.5px solid $grey-color;
+      padding-bottom: 16px;
+      &__input {
+        background: transparent;
+        border: none;
+        width: 100%;
+        outline: none;
+
+        &::placeholder {
+          color: $grey-color;
+          @include font(14px, 17px, 400);
+        }
+      }
+      &__btn {
+        background-color: $green-color;
+        border: none;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        min-width: 40px;
+        cursor: pointer;
+        font-size: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  &__bottom {
+    width: 100%;
+    text-align: center;
+    color: $grey-color;
+    margin: 20px auto;
+    @include font(12px, 15px, 400);
+  }
+}
