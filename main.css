@@ -12,6 +12,7 @@ body {
 img {
   -o-object-fit: contain;
      object-fit: contain;
+  width: 100%;
 }
 
 .header {
@@ -289,16 +290,17 @@ img {
     gap: 24px;
   }
 }
-.feature__row .feature-card {
+.feature__card {
   border-radius: 12px;
   border: 1px solid transparent;
   background: linear-gradient(#000000) padding-box, linear-gradient(to right, #4d4d4d, #b3b3b3) border-box;
 }
-.feature__row .feature-card__icon {
-  margin: 30px;
-  height: 36px;
+.feature__card-icon {
+  margin: 20px;
+  width: 36px;
+  height: auto;
 }
-.feature__row .feature-card__title {
+.feature__title {
   font-family: "Inter", sans-serif;
   color: #e5e5e5;
   font-size: 20px;
@@ -306,7 +308,7 @@ img {
   font-weight: 400;
   margin-bottom: 16px;
 }
-.feature__row .feature-card__desc {
+.feature__desc {
   color: #999999;
   font-size: 16px;
   line-height: 20px;
@@ -491,6 +493,7 @@ img {
   .blockchain__img {
     flex: 1;
     max-width: 506px;
+    padding-right: 72px;
   }
 }
 .blockchain__list {
